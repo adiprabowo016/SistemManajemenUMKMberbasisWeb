@@ -97,6 +97,10 @@ const getMe = (req, res) => {
     });
 };
 
+const healthcheck = (req, res) => {
+    return res.status(200).send("ok");
+};
+
 
 // LOGOUT ADMIN
 const logout = (req, res) => {
@@ -123,5 +127,6 @@ const logout = (req, res) => {
 module.exports = {
     login,
     getMe,
-    logout
+    logout,
+    healthcheck
 };
